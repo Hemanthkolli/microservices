@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+  <head>
+    <meta http-equiv="Content-Type" Content="text/html;charset=utf-8"/> <meta content="utf-8" http-equiv="encoding">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  </head>
+
+  <body>
+  
+  <div class="jumbotron">
+      <div class="container">
+        <div class="col-xs-offset-0 col-xs-15">
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+	
+    <script src="packages/jquery-2.0.3.min.js"></script>
+    <script src="packages/angular.js"></script>
+    <script src="packages/angular.min.js"></script>
+    <script src="packages/angular-route.js"></script>
+    <script src="packages/angular-cookies.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="modules/authentication/services.js"></script>
+    <script src="modules/authentication/controllers.js"></script>
+    <script src="modules/home/controllers.js"></script>
+	<script src="modules/register/registercontroller.js"></script>
+	<script src="modules/register/userservice.js"></script>
+	<script src="modules/Device_Register/device_controller_service.js"></script>
+	<script src="modules/Device_Register/device_register_controller.js"></script>
+	<script src="modules/dashboard/dashboard_controller.js"></script>
+	<script src="modules/dashboard/dashboard_services.js"></script>
+	<script src="modules/networks/network_controller.js"></script>
+	<script src="modules/networks/network_services.js"></script>
+  </body>
+
+</html>

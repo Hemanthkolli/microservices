@@ -1,0 +1,180 @@
+<div class="col-xs-offset-2 col-md-8">
+<div id="head" class="page-header">
+    <img src="index.png"  width="100px"  hspace=""/>
+
+</div>
+<div class="col-md-6 col-md-offset-3">
+
+    <div  id="name">
+        <h3><b>SIGNUP FOR</b> NEW ACCOUNT </h3>
+    </div>
+    <form name="form-signup" ng-submit="register()" role="form">
+        <div>
+            <div class="two-col" style="margin-left: -20%">
+                <div class="email" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email"  class="form-control" placeholder="email-id" ng-model="email" required/>
+                    <span class="help-block" ng-show="form.email.$dirty && form.email.$error.required" >Email is required</span>
+
+                </div>
+
+                <div class="fullname" ng-class="{ 'has-error': form.fullname.$dirty && form.fullname.$error.required }">
+                    <label for="fullname">FULL NAME</label>
+                    <input type="text" name="fullname" id="fullname" class="form-control" placeholder="full name" ng-model="fullname" required />
+                    <span ng-show="form.fullname.$dirty && form.fullname.$error.required" class="help-block">fullname is required</span>
+                </div>
+            </div>
+            <div class="two-col1" style="margin-left: -20%">
+                <div class="password" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="password" ng-model="password" required />
+                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                </div>
+
+                <div class="conf-password" ng-class="{ 'has-error': form.confirmpassword.$dirty && form.confirmpassword.$error.required }">
+                    <label for="confirmpassword">CONFIRM PASSWORD</label>
+                    <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="confirm password" ng-model="confirmpassword" onkeyup="checkPass(); return false;"  required  />
+					<span id="confirmMessage" class="confirmMessage" style="font-size:60%"></span>
+                    <span ng-show="form.confirmpassword.$dirty && form.confirmpassword.$error.required" class="help-block">confirmpassword is required</span>
+                </div>
+            </div>
+            <div class="two-col2" style="margin-left: -20%">
+                <div class="company" ng-class="{ 'has-error': form.company.$dirty && form.company.$error.required }">
+                    <label for="company">ORGANIZATION</label>
+                    <input type="text" name="company" id="company" class="form-control" placeholder="company" ng-model="company" required />
+                    <span ng-show="form.company.$dirty && form.company.$error.required" class="help-block">Organization is required</span>
+                </div>
+
+                <div class="address" style="" ng-class="{ 'has-error': form.address.$dirty && form.address.$error.required }">
+                    <label for="address">ADDRESS</label>
+                    <input type="text" name="address" id="address" class="form-control" placeholder="address" ng-model="address" />
+                    <span ng-show="form.address.$dirty && form.address.$error.required" class="help-block">address is required</span>
+                </div>
+            </div>
+            <div class="two-col3">
+                <div class="region" style=""  ng-class="{ 'has-error': form.region.$dirty && form.region.$error.required }">
+
+                    <label for="region">REGION</label>
+                    <select type= "text" id="region"  class="form-control" ng-model="region" ng-options="" style="width: 250px; margin-right: 70%" >
+                        <option value="select">--Select Region--</option>
+                        <option value="INDIA">INDIA</option>
+                        <option value="US">US</option>
+                        <option value="GREECE">GREECE</option>
+                        <option value="ITALY">ITALY</option>
+                        <option value="GERMANY">GERMANY</option>
+                        <option value="RUSSIA">RUSSIA</option>
+                        <option value="UK">UK</option>
+                    </select>
+
+                    <span ng-show="form.region.$dirty && form.region.$error.required" class="help-block">region is required</span>
+
+                </div>
+                
+            </div>
+            
+
+            <div class="submit" align="center" style="margin-right: -90%">
+                <button type="submit"  class="btn btn-success">SIGNUP</button>
+                <a href="#!/login" class="btn btn-link">Cancel</a>
+              
+            
+            </div>
+		
+        </div>
+
+    </form>
+</div>
+</div>
+
+<style>
+    form{width: 100%}
+
+    .email {
+        float: left;
+        position: inline-block;
+        width:300px;
+        margin-left: -25%;
+		font-size:70%;
+		margin-bottom: 5%;
+    }
+
+    .two-col .fullname {
+        float: auto;
+        width:300px;
+        margin-left: -25%;
+		font-size:70%;
+		margin-bottom: 5%;
+		
+    }
+	
+    .two-col1 .password {
+        float: inherit;
+        width:300px;
+        margin-left: -25%;
+		font-size:70%;
+		margin-bottom: 5%;
+    }
+
+    .two-col1 .conf-password {
+        float: left;
+        width:300px;
+        margin-left: -25%;
+		font-size:70%;
+		margin-bottom: 5%;
+    }
+	
+    .two-col2 .company {
+        float: top;
+        width:300px;
+        margin-left: -25%;
+		font-size:70%;
+		margin-bottom: 5%;
+    }
+
+    .address {
+        float: right;
+        position: inline-block;
+        width:300px;
+        margin-top: -113%;
+        margin-right: -55%;
+		font-size:70%;
+		margin-bottom: 5%;
+    }
+
+    .region{
+        float: right;
+        position: inline-block;
+        width:300px;
+        margin-top: -109%;
+        margin-right: -65%;
+		
+		font-size:70%;
+    }
+
+    .submit{
+        width:450px;
+        margin: 50px 0 5px 0;
+		font-size:80%;
+    }
+
+    #head{
+        margin-left: -35%;
+		align:left;
+        padding: 2px;
+        margin-top: -5%;
+    }
+    
+	#name{
+        margin: 50px 0 50px 0;
+        background-color: whitesmoke;
+        border-style: solid;
+        border-color: black;
+        border-width: thin;
+        width: 1000px;
+        padding: .25px;
+        text-align: center;
+		margin-left: -90%;
+		 margin-top: -5%;
+	}
+	
+</style>

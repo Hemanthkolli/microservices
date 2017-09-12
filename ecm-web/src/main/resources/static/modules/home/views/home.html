@@ -1,0 +1,91 @@
+<div class="col-xs-offset-0">
+<div id="header">
+    <img src="index.png"  width="125px"/>
+    <div class="dashboard">
+        <button onclick="window.location.href='/#/networks'" >DASHBOARD</button>
+    </div>
+    
+
+    <div class="logout">
+
+        <button onclick="window.location.href='/#/login'"><image src="p1.jpeg" width="25%"/></button>
+    </div>
+    <div class="admin">
+        <button><image src="user.png" width="50px"/>Administrator</button>
+
+    </div>
+</div>
+<div class="body" align="center">
+    <p style="font-size: 275%;color: lightgray;margin: 2%">No Devices Registered</p>
+    <p style="font-size: 150%;margin: 2%">Click here to <a href="../../../../#/device_registration"> Register</a> your Devices OR Go to <a href="/#/networks" >Dashboard</a></p>
+
+</div>
+</div>
+
+<!-- <script>
+function newDoc() {
+    window.location.assign("/modules/authentication/views/login.html")
+}
+</script> -->
+
+<style>
+    form{width: 100%}
+    #header{
+    	align:left;
+        layout:row;
+        background-color: gainsboro;
+        max-height: 100%;
+    }
+
+    .dashboard button{
+        margin-left: 12%;
+        margin-top: -5.2%;
+        background-color: gray;
+
+        border: 1px solid gainsboro; /* Green border */
+        color: white; /* White text */
+        padding: 9px 30px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+
+    }
+
+    .logout button{
+        margin-left: 85%;
+        margin-top: -5.0%;
+        background-color: gainsboro;
+        border: 1px solid gainsboro; /* Green border */
+        color: black; /* White text */
+
+
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+
+    }
+    
+    .admin button{
+        margin-left: 75%;
+        margin-top: -5.2%;
+        background-color: gainsboro;
+        border: 1px solid gainsboro; /* Green border */
+        color: black; /* White text */
+		font-size:70%;
+		
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+
+    }
+
+    .body{
+       margin-top: 10%;
+        margin-left: 10%;
+        align-content: center;
+        width : 80%;
+        align-self: center;
+        border: 1px solid gray;
+
+    }
+
+
+
+</style>

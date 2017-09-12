@@ -1,0 +1,228 @@
+
+<div class="main"  ng-init="getdevices()">
+<div id="header">
+    <img src="index.png"  width="125px"/>
+     <div class="dashboard">
+        <button onclick="window.location.href='/#/networks'">DASHBOARD</button>
+    </div>
+  <!--   <div class="md-button">
+        <button>Help
+            <select>
+
+            </select>
+        </button>
+        </section>
+    </div> -->
+
+    <div class="logout">
+
+        <button onclick="window.location.href='/#/login'"><image src="p1.jpeg" width="25%"/></button>
+    </div>
+    <div class="admin">
+        <button><image src="user.png" width="40px"/>Administrator</button>
+
+    </div> 
+</div>
+
+<div>
+<div id="Side" class="sidemenu" onmouseleave="closeNav()">
+    
+    <a href="/#/networks" style="margin-left:15%" >Networks</a>
+  <a href="/#/dashboard" style="margin-left:16%">Devices</a>
+  </div>
+  
+  <span style="font-size:25px;cursor:pointer" onmouseover="openNav()"   >&#9776; Menu</span>
+</div>
+
+<script>
+
+
+function openNav() {
+    document.getElementById("Side").style.width = "200px";
+    document.getElementById("main").style.marginLeft = "200px";
+}
+
+function closeNav() {
+    document.getElementById("Side").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<div class="id">
+<p><b>Devices</b></p>
+</div>
+
+<div id="main">
+<div class="register">
+
+        <button onclick="window.location.href='/#/device_registration'" class="btn btn-primary">Register New Device</button>
+</div>
+
+
+
+ <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Serial Number</th>
+                                        <th>OUI</th>
+       									<th>Model Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+									<tr ng-repeat="device in devices">
+                                        	<td ng-model="device.serial">{{device.serial}}</td>
+                                			<td ng-model="device.oui">{{device.oui}}</td>
+     										<td ng-model="device.product">{{device.productClass}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+  </div> 
+</div>
+
+<style>
+	form{width: 30%}
+	#header{
+    	align:left;
+        layout:row;
+        background-color: gainsboro;
+        max-height: 100%;
+        }
+
+	.id{
+     font-size=60%;
+     margin-left: 20%;
+     margin-top:-4%;
+     }
+
+    .dashboard button{
+        margin-left: 11%;
+        margin-top: -4.8%;
+        background-color: gray;
+		font-size:70%;
+        border: 1px solid gainsboro; /* Green border */
+        color: white; /* White text */
+        padding: 9px 30px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+
+    }
+
+    .md-button button{
+        margin-left: 68%;
+        margin-top: -4.9%;
+        background-color: gainsboro;
+        border: 1px solid gainsboro; /* Green border */
+        color: black; /* White text */
+        padding: 16px 8px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+
+    }
+
+    .logout button{
+        margin-left: 85%;
+        margin-top: -5.0%;
+        background-color: gainsboro;
+        border: 1px solid gainsboro; /* Green border */
+        color: black; /* White text */
+
+
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+
+    }
+    
+    .admin button{
+        margin-left: 75%;
+        margin-top: -5.0%;
+        background-color: gainsboro;
+        border: 1px solid gainsboro; /* Green border */
+        color: black; /* White text */
+		font-size:70%;
+		
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+
+    }
+    
+    .register button{
+    	margin-left: 2%;
+    	
+    }
+    
+    table, th , td {
+		margin-top:1%;
+        border: 1px solid grey;
+        border-collapse: collapse;
+        
+        padding: .25px;
+    }
+    
+    th{
+    background-color:lightgray;
+		color:black;
+    }
+    
+    table tr:nth-child(odd) {
+         background-color: #b8d1f3;
+    }
+    table tr:nth-child(even) {
+        background-color: #dae5f4;
+     }
+  
+    .sidemenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    margin-top:3%;
+    top: 30;
+    left: 5;
+    background-color: lightgray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+    padding-top: 50px;
+}
+
+.sidenav a {
+    padding: 4px 4px 4px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: whitesmoke;
+    display: blue;
+    transition: 0.6s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #FFF8DC;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: -60px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 100px;}
+  .sidenav a {font-size: 18px;}
+}
+   
+	
+</style>
