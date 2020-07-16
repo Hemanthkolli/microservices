@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/thotasrinath/ventus-config
+          uri: https://github.com/Hemanthkolli/microservices-config
 # While in development mode, you can configure the config server to pick up configuration files from
 # the file system
           
